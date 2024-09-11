@@ -55,6 +55,7 @@
             clearBtn.TabIndex = 1;
             clearBtn.Text = "CE";
             clearBtn.UseVisualStyleBackColor = true;
+            clearBtn.Click += clearBtn_Click;
             // 
             // divisionToggle
             // 
@@ -66,6 +67,7 @@
             divisionToggle.TabStop = true;
             divisionToggle.Text = "/";
             divisionToggle.UseVisualStyleBackColor = true;
+            divisionToggle.CheckedChanged += divisionToggle_CheckedChanged;
             // 
             // additionToggle
             // 
@@ -77,6 +79,7 @@
             additionToggle.TabStop = true;
             additionToggle.Text = "+";
             additionToggle.UseVisualStyleBackColor = true;
+            additionToggle.CheckedChanged += additionToggle_CheckedChanged;
             // 
             // subtractToggle
             // 
@@ -88,6 +91,7 @@
             subtractToggle.TabStop = true;
             subtractToggle.Text = "-";
             subtractToggle.UseVisualStyleBackColor = true;
+            subtractToggle.CheckedChanged += subtractToggle_CheckedChanged;
             // 
             // textBox1
             // 
@@ -95,6 +99,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(71, 26);
             textBox1.TabIndex = 6;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -102,6 +107,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(71, 26);
             textBox2.TabIndex = 7;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // multiplyToggle
             // 
@@ -113,6 +119,7 @@
             multiplyToggle.TabStop = true;
             multiplyToggle.Text = "*";
             multiplyToggle.UseVisualStyleBackColor = true;
+            multiplyToggle.CheckedChanged += multiplyToggle_CheckedChanged;
             // 
             // Form1
             // 
