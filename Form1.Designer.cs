@@ -36,6 +36,7 @@
             multiplyToggle = new RadioButton();
             userInput_1 = new NumericUpDown();
             userInput_2 = new NumericUpDown();
+            resultContainer = new TextBox();
             ((System.ComponentModel.ISupportInitialize)userInput_1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)userInput_2).BeginInit();
             SuspendLayout();
@@ -113,6 +114,7 @@
             userInput_1.Name = "userInput_1";
             userInput_1.Size = new Size(92, 26);
             userInput_1.TabIndex = 9;
+            userInput_1.ValueChanged += userInput_1_ValueChanged;
             // 
             // userInput_2
             // 
@@ -120,12 +122,22 @@
             userInput_2.Name = "userInput_2";
             userInput_2.Size = new Size(92, 26);
             userInput_2.TabIndex = 10;
+            userInput_2.ValueChanged += userInput_2_ValueChanged;
+            // 
+            // resultContainer
+            // 
+            resultContainer.Location = new Point(165, 297);
+            resultContainer.Name = "resultContainer";
+            resultContainer.Size = new Size(98, 26);
+            resultContainer.TabIndex = 11;
+            resultContainer.TextChanged += resultContainer_TextChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(470, 791);
+            Controls.Add(resultContainer);
             Controls.Add(userInput_2);
             Controls.Add(userInput_1);
             Controls.Add(multiplyToggle);
@@ -153,5 +165,6 @@
         private RadioButton multiplyToggle;
         private NumericUpDown userInput_1;
         private NumericUpDown userInput_2;
+        private TextBox resultContainer;
     }
 }

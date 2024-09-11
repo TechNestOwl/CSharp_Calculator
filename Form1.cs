@@ -16,6 +16,7 @@ namespace CSharp_Calculator
         {
             userInput_1.Text = string.Empty;
             userInput_2.Text = string.Empty;
+            resultContainer.Text = string.Empty;
             if (divisionToggle.Checked)
             {
                 divisionToggle.Checked = false;
@@ -50,6 +51,27 @@ namespace CSharp_Calculator
         }
 
         private void additionToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            if (additionToggle.Checked)
+            {
+                decimal result = (userInput_1.Value + userInput_2.Value);
+
+                resultContainer.Text = result.ToString();
+
+            }
+        }
+
+        private void userInput_1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userInput_2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resultContainer_TextChanged(object sender, EventArgs e)
         {
 
         }
