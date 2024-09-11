@@ -33,15 +33,17 @@
             divisionToggle = new RadioButton();
             additionToggle = new RadioButton();
             subtractToggle = new RadioButton();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
             multiplyToggle = new RadioButton();
+            userInput_1 = new NumericUpDown();
+            userInput_2 = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)userInput_1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)userInput_2).BeginInit();
             SuspendLayout();
             // 
             // titleLabel
             // 
             titleLabel.AutoSize = true;
-            titleLabel.Location = new Point(177, 9);
+            titleLabel.Location = new Point(165, 9);
             titleLabel.Name = "titleLabel";
             titleLabel.Size = new Size(98, 20);
             titleLabel.TabIndex = 0;
@@ -49,7 +51,7 @@
             // 
             // clearBtn
             // 
-            clearBtn.Location = new Point(198, 51);
+            clearBtn.Location = new Point(189, 51);
             clearBtn.Name = "clearBtn";
             clearBtn.Size = new Size(44, 46);
             clearBtn.TabIndex = 1;
@@ -93,22 +95,6 @@
             subtractToggle.UseVisualStyleBackColor = true;
             subtractToggle.CheckedChanged += subtractToggle_CheckedChanged;
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(87, 62);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(71, 26);
-            textBox1.TabIndex = 6;
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(284, 62);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(71, 26);
-            textBox2.TabIndex = 7;
-            textBox2.TextChanged += textBox2_TextChanged;
-            // 
             // multiplyToggle
             // 
             multiplyToggle.AutoSize = true;
@@ -121,14 +107,28 @@
             multiplyToggle.UseVisualStyleBackColor = true;
             multiplyToggle.CheckedChanged += multiplyToggle_CheckedChanged;
             // 
+            // userInput_1
+            // 
+            userInput_1.Location = new Point(71, 63);
+            userInput_1.Name = "userInput_1";
+            userInput_1.Size = new Size(92, 26);
+            userInput_1.TabIndex = 9;
+            // 
+            // userInput_2
+            // 
+            userInput_2.Location = new Point(267, 63);
+            userInput_2.Name = "userInput_2";
+            userInput_2.Size = new Size(92, 26);
+            userInput_2.TabIndex = 10;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(470, 791);
+            Controls.Add(userInput_2);
+            Controls.Add(userInput_1);
             Controls.Add(multiplyToggle);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
             Controls.Add(subtractToggle);
             Controls.Add(additionToggle);
             Controls.Add(divisionToggle);
@@ -137,6 +137,8 @@
             Name = "Form1";
             Text = "C# Calculator";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)userInput_1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)userInput_2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -148,8 +150,8 @@
         private RadioButton divisionToggle;
         private RadioButton additionToggle;
         private RadioButton subtractToggle;
-        private TextBox textBox1;
-        private TextBox textBox2;
         private RadioButton multiplyToggle;
+        private NumericUpDown userInput_1;
+        private NumericUpDown userInput_2;
     }
 }

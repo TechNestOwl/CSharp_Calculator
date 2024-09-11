@@ -12,31 +12,23 @@ namespace CSharp_Calculator
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            textBox1.Text = string.Empty;
-            textBox2.Text = string.Empty;
+            userInput_1.Text = string.Empty;
+            userInput_2.Text = string.Empty;
             if (divisionToggle.Checked)
             {
                 divisionToggle.Checked = false;
-            }if (multiplyToggle.Checked)
+            }
+            if (multiplyToggle.Checked)
             {
                 multiplyToggle.Checked = false;
             }
             if (subtractToggle.Checked)
             {
                 subtractToggle.Checked = false;
-            }if (additionToggle.Checked)
+            }
+            if (additionToggle.Checked)
             {
                 additionToggle.Checked = false;
             }
