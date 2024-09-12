@@ -53,7 +53,7 @@ namespace CSharp_Calculator
 
         private void additionToggle_CheckedChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         private void userInput_1_ValueChanged(object sender, EventArgs e)
@@ -87,7 +87,8 @@ namespace CSharp_Calculator
 
                     resultContainer.Text = result.ToString();
 
-                }if (subtractToggle.Checked)
+                }
+                if (subtractToggle.Checked)
                 {
                     decimal result = (userInput_1.Value - userInput_2.Value);
                     resultContainer.Text = result.ToString();
@@ -107,7 +108,54 @@ namespace CSharp_Calculator
             {
                 MessageBox.Show("Please enter two numbers and select an arithmetic option.");
             }
-            
+
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            userInput_1.Text = string.Empty;
+            userInput_2.Text = string.Empty;
+            resultContainer.Text = string.Empty;
+            if (divisionToggle.Checked)
+            {
+                divisionToggle.Checked = false;
+            }
+            if (multiplyToggle.Checked)
+            {
+                multiplyToggle.Checked = false;
+            }
+            if (subtractToggle.Checked)
+            {
+                subtractToggle.Checked = false;
+            }
+            if (additionToggle.Checked)
+            {
+                additionToggle.Checked = false;
+            }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void darkModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //setting the background color
+            this.BackColor = Color.DarkBlue;
+            this.ForeColor = Color.Gray;
+        }
+
+        private void lightModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor = SystemColors.Control;
+            this.ForeColor = SystemColors.ControlText;
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Gill Guimaraes | CIST 2145");
+
         }
     }
 }
