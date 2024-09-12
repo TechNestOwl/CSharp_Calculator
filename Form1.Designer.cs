@@ -37,22 +37,28 @@
             userInput_1 = new NumericUpDown();
             userInput_2 = new NumericUpDown();
             resultContainer = new TextBox();
+            calcBtn = new Button();
+            exitBtn = new Button();
+            menuStrip1 = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)userInput_1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)userInput_2).BeginInit();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // titleLabel
             // 
             titleLabel.AutoSize = true;
-            titleLabel.Location = new Point(165, 9);
+            titleLabel.Font = new Font("Cascadia Code", 11.2695656F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            titleLabel.Location = new Point(163, 100);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(98, 20);
+            titleLabel.Size = new Size(153, 24);
             titleLabel.TabIndex = 0;
             titleLabel.Text = "C# Calculator";
             // 
             // clearBtn
             // 
-            clearBtn.Location = new Point(189, 51);
+            clearBtn.Location = new Point(185, 147);
             clearBtn.Name = "clearBtn";
             clearBtn.Size = new Size(44, 46);
             clearBtn.TabIndex = 1;
@@ -63,7 +69,7 @@
             // divisionToggle
             // 
             divisionToggle.AutoSize = true;
-            divisionToggle.Location = new Point(200, 204);
+            divisionToggle.Location = new Point(198, 300);
             divisionToggle.Name = "divisionToggle";
             divisionToggle.Size = new Size(33, 24);
             divisionToggle.TabIndex = 3;
@@ -75,7 +81,7 @@
             // additionToggle
             // 
             additionToggle.AutoSize = true;
-            additionToggle.Location = new Point(200, 115);
+            additionToggle.Location = new Point(198, 211);
             additionToggle.Name = "additionToggle";
             additionToggle.Size = new Size(37, 24);
             additionToggle.TabIndex = 4;
@@ -87,7 +93,7 @@
             // subtractToggle
             // 
             subtractToggle.AutoSize = true;
-            subtractToggle.Location = new Point(200, 163);
+            subtractToggle.Location = new Point(198, 259);
             subtractToggle.Name = "subtractToggle";
             subtractToggle.Size = new Size(33, 24);
             subtractToggle.TabIndex = 5;
@@ -99,7 +105,7 @@
             // multiplyToggle
             // 
             multiplyToggle.AutoSize = true;
-            multiplyToggle.Location = new Point(198, 253);
+            multiplyToggle.Location = new Point(196, 349);
             multiplyToggle.Name = "multiplyToggle";
             multiplyToggle.Size = new Size(33, 24);
             multiplyToggle.TabIndex = 8;
@@ -110,7 +116,7 @@
             // 
             // userInput_1
             // 
-            userInput_1.Location = new Point(71, 63);
+            userInput_1.Location = new Point(69, 159);
             userInput_1.Name = "userInput_1";
             userInput_1.Size = new Size(92, 26);
             userInput_1.TabIndex = 9;
@@ -118,7 +124,7 @@
             // 
             // userInput_2
             // 
-            userInput_2.Location = new Point(267, 63);
+            userInput_2.Location = new Point(265, 159);
             userInput_2.Name = "userInput_2";
             userInput_2.Size = new Size(92, 26);
             userInput_2.TabIndex = 10;
@@ -126,17 +132,56 @@
             // 
             // resultContainer
             // 
-            resultContainer.Location = new Point(165, 297);
+            resultContainer.Location = new Point(163, 437);
             resultContainer.Name = "resultContainer";
             resultContainer.Size = new Size(98, 26);
             resultContainer.TabIndex = 11;
             resultContainer.TextChanged += resultContainer_TextChanged;
+            // 
+            // calcBtn
+            // 
+            calcBtn.Location = new Point(163, 389);
+            calcBtn.Name = "calcBtn";
+            calcBtn.Size = new Size(98, 28);
+            calcBtn.TabIndex = 12;
+            calcBtn.Text = "Calculate";
+            calcBtn.UseVisualStyleBackColor = true;
+            calcBtn.Click += calcBtn_Click;
+            // 
+            // exitBtn
+            // 
+            exitBtn.BackColor = Color.FromArgb(255, 128, 0);
+            exitBtn.Location = new Point(163, 513);
+            exitBtn.Name = "exitBtn";
+            exitBtn.Size = new Size(90, 28);
+            exitBtn.TabIndex = 14;
+            exitBtn.Text = "Exit";
+            exitBtn.UseVisualStyleBackColor = false;
+            exitBtn.Click += exitBtn_Click;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(19, 19);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(470, 28);
+            menuStrip1.TabIndex = 15;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(46, 24);
+            fileToolStripMenuItem.Text = "File";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(470, 791);
+            Controls.Add(exitBtn);
+            Controls.Add(calcBtn);
             Controls.Add(resultContainer);
             Controls.Add(userInput_2);
             Controls.Add(userInput_1);
@@ -146,11 +191,15 @@
             Controls.Add(divisionToggle);
             Controls.Add(clearBtn);
             Controls.Add(titleLabel);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "C# Calculator";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)userInput_1).EndInit();
             ((System.ComponentModel.ISupportInitialize)userInput_2).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -166,5 +215,9 @@
         private NumericUpDown userInput_1;
         private NumericUpDown userInput_2;
         private TextBox resultContainer;
+        private Button calcBtn;
+        private Button exitBtn;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
     }
 }

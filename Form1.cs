@@ -5,6 +5,7 @@ namespace CSharp_Calculator
         public Form1()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -52,13 +53,7 @@ namespace CSharp_Calculator
 
         private void additionToggle_CheckedChanged(object sender, EventArgs e)
         {
-            if (additionToggle.Checked)
-            {
-                decimal result = (userInput_1.Value + userInput_2.Value);
-
-                resultContainer.Text = result.ToString();
-
-            }
+          
         }
 
         private void userInput_1_ValueChanged(object sender, EventArgs e)
@@ -74,6 +69,45 @@ namespace CSharp_Calculator
         private void resultContainer_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void calcBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (additionToggle.Checked)
+                {
+                    decimal result = (userInput_1.Value + userInput_2.Value);
+
+                    resultContainer.Text = result.ToString();
+
+                }if (subtractToggle.Checked)
+                {
+                    decimal result = (userInput_1.Value - userInput_2.Value);
+                    resultContainer.Text = result.ToString();
+                }
+                if (multiplyToggle.Checked)
+                {
+                    decimal result = (userInput_1.Value * userInput_2.Value);
+                    resultContainer.Text = result.ToString();
+                }
+                if (divisionToggle.Checked)
+                {
+                    decimal result = (userInput_1.Value / userInput_2.Value);
+                    resultContainer.Text = result.ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Please enter two numbers and select an arithmetic option.");
+            }
+            
         }
     }
 }
