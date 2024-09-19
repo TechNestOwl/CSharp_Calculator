@@ -48,6 +48,8 @@
             lightModeToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
+            ForLoop_Btn = new Button();
+            WhileLoop_Btn = new Button();
             ((System.ComponentModel.ISupportInitialize)userInput_1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)userInput_2).BeginInit();
             menuStrip1.SuspendLayout();
@@ -210,14 +212,14 @@
             // darkModeToolStripMenuItem
             // 
             darkModeToolStripMenuItem.Name = "darkModeToolStripMenuItem";
-            darkModeToolStripMenuItem.Size = new Size(167, 26);
+            darkModeToolStripMenuItem.Size = new Size(217, 26);
             darkModeToolStripMenuItem.Text = "Dark Mode";
             darkModeToolStripMenuItem.Click += darkModeToolStripMenuItem_Click;
             // 
             // lightModeToolStripMenuItem
             // 
             lightModeToolStripMenuItem.Name = "lightModeToolStripMenuItem";
-            lightModeToolStripMenuItem.Size = new Size(167, 26);
+            lightModeToolStripMenuItem.Size = new Size(217, 26);
             lightModeToolStripMenuItem.Text = "Light Mode";
             lightModeToolStripMenuItem.Click += lightModeToolStripMenuItem_Click;
             // 
@@ -235,11 +237,34 @@
             aboutToolStripMenuItem.Text = "About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
+            // ForLoop_Btn
+            // 
+            ForLoop_Btn.BackColor = SystemColors.ButtonHighlight;
+            ForLoop_Btn.Location = new Point(12, 695);
+            ForLoop_Btn.Name = "ForLoop_Btn";
+            ForLoop_Btn.Size = new Size(98, 28);
+            ForLoop_Btn.TabIndex = 16;
+            ForLoop_Btn.Text = "For Loop";
+            ForLoop_Btn.UseVisualStyleBackColor = false;
+            ForLoop_Btn.Click += ForLoop_Btn_Click;
+            // 
+            // WhileLoop_Btn
+            // 
+            WhileLoop_Btn.Location = new Point(12, 729);
+            WhileLoop_Btn.Name = "WhileLoop_Btn";
+            WhileLoop_Btn.Size = new Size(98, 28);
+            WhileLoop_Btn.TabIndex = 17;
+            WhileLoop_Btn.Text = "While Loop";
+            WhileLoop_Btn.UseVisualStyleBackColor = true;
+            WhileLoop_Btn.Click += WhileLoop_Btn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(470, 791);
+            Controls.Add(WhileLoop_Btn);
+            Controls.Add(ForLoop_Btn);
             Controls.Add(exitBtn);
             Controls.Add(calcBtn);
             Controls.Add(resultContainer);
@@ -286,5 +311,7 @@
         private ToolStripMenuItem lightModeToolStripMenuItem;
         private ToolStripMenuItem clearToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
+        private Button ForLoop_Btn;
+        private Button WhileLoop_Btn;
     }
 }

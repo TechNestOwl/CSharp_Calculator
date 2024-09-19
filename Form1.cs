@@ -178,7 +178,30 @@ namespace CSharp_Calculator
 
         private void exitBtn_MouseLeave(object sender, EventArgs e)
         {
-            clearBtn.Visible=true;  
+            clearBtn.Visible = true;
+        }
+
+        private void ForLoop_Btn_Click(object sender, EventArgs e)
+        {
+            //incrementing for loop
+            for (int count = 0; count <= 10; count++)
+            {
+                Console.WriteLine("Go Falcons", count); 
+                System.Diagnostics.Debug.WriteLine("Go Falcons", count);
+            }
+        }
+
+        private void WhileLoop_Btn_Click(object sender, EventArgs e)
+        {
+            //decrementing while loop
+            int count = 10;
+            while (count >= 0)
+            {
+                Console.WriteLine("Go Falcons", count);
+                System.Diagnostics.Debug.WriteLine("Go Falcons", count);
+                count--;
+
+            }
         }
     }
 }
