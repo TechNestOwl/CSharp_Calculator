@@ -50,6 +50,9 @@
             aboutToolStripMenuItem = new ToolStripMenuItem();
             ForLoop_Btn = new Button();
             WhileLoop_Btn = new Button();
+            memoryBtn = new Button();
+            memoryLabel = new Label();
+            mPlus_Btn = new Button();
             ((System.ComponentModel.ISupportInitialize)userInput_1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)userInput_2).BeginInit();
             menuStrip1.SuspendLayout();
@@ -212,14 +215,14 @@
             // darkModeToolStripMenuItem
             // 
             darkModeToolStripMenuItem.Name = "darkModeToolStripMenuItem";
-            darkModeToolStripMenuItem.Size = new Size(217, 26);
+            darkModeToolStripMenuItem.Size = new Size(167, 26);
             darkModeToolStripMenuItem.Text = "Dark Mode";
             darkModeToolStripMenuItem.Click += darkModeToolStripMenuItem_Click;
             // 
             // lightModeToolStripMenuItem
             // 
             lightModeToolStripMenuItem.Name = "lightModeToolStripMenuItem";
-            lightModeToolStripMenuItem.Size = new Size(217, 26);
+            lightModeToolStripMenuItem.Size = new Size(167, 26);
             lightModeToolStripMenuItem.Text = "Light Mode";
             lightModeToolStripMenuItem.Click += lightModeToolStripMenuItem_Click;
             // 
@@ -258,11 +261,45 @@
             WhileLoop_Btn.UseVisualStyleBackColor = true;
             WhileLoop_Btn.Click += WhileLoop_Btn_Click;
             // 
+            // memoryBtn
+            // 
+            memoryBtn.Location = new Point(12, 661);
+            memoryBtn.Name = "memoryBtn";
+            memoryBtn.Size = new Size(45, 28);
+            memoryBtn.TabIndex = 18;
+            memoryBtn.Text = "M";
+            memoryBtn.UseVisualStyleBackColor = true;
+            memoryBtn.Click += memoryBtn_Click;
+            // 
+            // memoryLabel
+            // 
+            memoryLabel.AutoSize = true;
+            memoryLabel.BackColor = Color.Cornsilk;
+            memoryLabel.Location = new Point(216, 700);
+            memoryLabel.Name = "memoryLabel";
+            memoryLabel.Size = new Size(0, 20);
+            memoryLabel.TabIndex = 19;
+            memoryLabel.MouseEnter += memoryLabel_MouseEnter;
+            memoryLabel.MouseLeave += memoryLabel_MouseLeave;
+            // 
+            // mPlus_Btn
+            // 
+            mPlus_Btn.Location = new Point(63, 661);
+            mPlus_Btn.Name = "mPlus_Btn";
+            mPlus_Btn.Size = new Size(47, 28);
+            mPlus_Btn.TabIndex = 20;
+            mPlus_Btn.Text = "M+";
+            mPlus_Btn.UseVisualStyleBackColor = true;
+            mPlus_Btn.Click += mPlus_Btn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(470, 791);
+            Controls.Add(mPlus_Btn);
+            Controls.Add(memoryLabel);
+            Controls.Add(memoryBtn);
             Controls.Add(WhileLoop_Btn);
             Controls.Add(ForLoop_Btn);
             Controls.Add(exitBtn);
@@ -313,5 +350,8 @@
         private ToolStripMenuItem exitToolStripMenuItem;
         private Button ForLoop_Btn;
         private Button WhileLoop_Btn;
+        private Button memoryBtn;
+        private Label memoryLabel;
+        private Button mPlus_Btn;
     }
 }

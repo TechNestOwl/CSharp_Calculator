@@ -2,7 +2,7 @@
 
    Gill Guimaraes
 
-   Lab #4 - September 12, 2024
+   Lab #5- September 19, 2024
 
    I wrote this code myself...
    I did not use AI or copy code from Google or another student
@@ -15,6 +15,8 @@ namespace CSharp_Calculator
 {
     public partial class Form1 : Form
     {
+        double globalMemory = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -186,7 +188,7 @@ namespace CSharp_Calculator
             //incrementing for loop
             for (int count = 0; count <= 10; count++)
             {
-                Console.WriteLine("Go Falcons", count); 
+                Console.WriteLine("Go Falcons", count);
                 System.Diagnostics.Debug.WriteLine("Go Falcons", count);
             }
         }
@@ -202,6 +204,41 @@ namespace CSharp_Calculator
                 count--;
 
             }
+        }
+
+        private void memoryBtn_Click(object sender, EventArgs e)
+        {
+            //grabbing result value
+            string memory = resultContainer.Text;
+
+            //assigning result value to hidden label
+            memoryLabel.Text = memory;
+
+
+        }
+
+        private void memoryLabel_MouseEnter(object sender, EventArgs e)
+        {
+            memoryLabel.Visible = true;
+
+
+        }
+
+        private void memoryLabel_MouseLeave(object sender, EventArgs e)
+        {
+            memoryLabel.Visible = false;
+
+        }
+
+        private void mPlus_Btn_Click(object sender, EventArgs e)
+        {
+            //assigning result value to global variable 
+            double newMemory = double.Parse(resultContainer.Text);
+            globalMemory = newMemory;
+
+            //logging to output
+            System.Diagnostics.Debug.WriteLine(globalMemory);
+
         }
     }
 }
