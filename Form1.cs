@@ -1,3 +1,16 @@
+/*********************************************************
+
+   Gill Guimaraes
+
+   Lab #4 - September 12, 2024
+
+   I wrote this code myself...
+   I did not use AI or copy code from Google or another student
+
+ *********************************************************/
+
+
+
 namespace CSharp_Calculator
 {
     public partial class Form1 : Form
@@ -154,8 +167,18 @@ namespace CSharp_Calculator
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Gill Guimaraes | CIST 2145");
+            MessageBox.Show("Gill Guimaraes | CIST 2341");
 
+        }
+
+        private void exitBtn_MouseEnter(object sender, EventArgs e)
+        {
+            clearBtn.Visible = false;
+        }
+
+        private void exitBtn_MouseLeave(object sender, EventArgs e)
+        {
+            clearBtn.Visible=true;  
         }
     }
 }

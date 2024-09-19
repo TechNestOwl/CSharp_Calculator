@@ -166,6 +166,8 @@
             exitBtn.Text = "Exit";
             exitBtn.UseVisualStyleBackColor = false;
             exitBtn.Click += exitBtn_Click;
+            exitBtn.MouseEnter += exitBtn_MouseEnter;
+            exitBtn.MouseLeave += exitBtn_MouseLeave;
             // 
             // menuStrip1
             // 
@@ -208,14 +210,14 @@
             // darkModeToolStripMenuItem
             // 
             darkModeToolStripMenuItem.Name = "darkModeToolStripMenuItem";
-            darkModeToolStripMenuItem.Size = new Size(217, 26);
+            darkModeToolStripMenuItem.Size = new Size(167, 26);
             darkModeToolStripMenuItem.Text = "Dark Mode";
             darkModeToolStripMenuItem.Click += darkModeToolStripMenuItem_Click;
             // 
             // lightModeToolStripMenuItem
             // 
             lightModeToolStripMenuItem.Name = "lightModeToolStripMenuItem";
-            lightModeToolStripMenuItem.Size = new Size(217, 26);
+            lightModeToolStripMenuItem.Size = new Size(167, 26);
             lightModeToolStripMenuItem.Text = "Light Mode";
             lightModeToolStripMenuItem.Click += lightModeToolStripMenuItem_Click;
             // 
@@ -229,7 +231,7 @@
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(217, 26);
+            aboutToolStripMenuItem.Size = new Size(132, 26);
             aboutToolStripMenuItem.Text = "About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
