@@ -2,7 +2,7 @@
 
    Gill Guimaraes
 
-   Lab #5- September 19, 2024
+   Lab #9 Exception Handling - October, 2024
 
    I wrote this code myself...
    I did not use AI or copy code from Google or another student
@@ -13,11 +13,11 @@
 
 namespace CSharp_Calculator
 {
-    public partial class Form1 : Form
+    public partial class Form1_calculator : Form
     {
         double globalMemory = 0;
 
-        public Form1()
+        public Form1_calculator()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -94,14 +94,13 @@ namespace CSharp_Calculator
 
         private void calcBtn_Click(object sender, EventArgs e)
         {
+            //lab #9 Try Catch work:
             try
             {
                 if (additionToggle.Checked)
                 {
                     decimal result = (userInput_1.Value + userInput_2.Value);
-
                     resultContainer.Text = result.ToString();
-
                 }
                 if (subtractToggle.Checked)
                 {
@@ -115,15 +114,24 @@ namespace CSharp_Calculator
                 }
                 if (divisionToggle.Checked)
                 {
-                    decimal result = (userInput_1.Value / userInput_2.Value);
-                    resultContainer.Text = result.ToString();
+                    // checking for division by zero
+                    if (userInput_2.Value == 0)
+                    {
+                        MessageBox.Show("You cannot divide by zero.");
+                        resultContainer.Text = "Error";
+                    }
+                    else
+                    {
+                        decimal result = (userInput_1.Value / userInput_2.Value);
+                        resultContainer.Text = result.ToString();
+                    }
                 }
             }
-            catch
+            catch 
             {
-                MessageBox.Show("Please enter two numbers and select an arithmetic option.");
+                MessageBox.Show("Please check inputs and try again.");
+                resultContainer.Text = "Error = ?";
             }
-
         }
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
@@ -201,8 +209,7 @@ namespace CSharp_Calculator
             {
                 Console.WriteLine("Go Falcons", count);
                 System.Diagnostics.Debug.WriteLine("Go Falcons", count);
-                count--;
-
+                count--; 
             }
         }
 
@@ -220,14 +227,11 @@ namespace CSharp_Calculator
         private void memoryLabel_MouseEnter(object sender, EventArgs e)
         {
             memoryLabel.Visible = true;
-
-
         }
 
         private void memoryLabel_MouseLeave(object sender, EventArgs e)
         {
             memoryLabel.Visible = false;
-
         }
 
         private void mPlus_Btn_Click(object sender, EventArgs e)

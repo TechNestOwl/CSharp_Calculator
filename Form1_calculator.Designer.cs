@@ -1,6 +1,6 @@
 ﻿namespace CSharp_Calculator
 {
-    partial class Form1
+    partial class Form1_calculator
     {
         /// <summary>
         ///  Required designer variable.
